@@ -1,0 +1,111 @@
+/* === Import Google Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+/* === Global Variables === */
+:root {
+  --color-primary: #6366f1;   /* Indigo */
+  --color-secondary: #8b5cf6; /* Purple */
+  --color-bg-light: #f9fafb;
+  --color-card: #ffffff;
+}
+
+/* === Base Styles === */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-bg-light);
+  color: #333;
+}
+
+/* === Headings & Typography === */
+h1, h2, h3 {
+  font-weight: 800;
+}
+
+p, li, input, select {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* === Button Styles === */
+.btn-animate {
+  background-color: var(--color-primary);
+  border-radius: .5rem;
+  padding: .75rem 2rem;
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+
+.btn-animate:hover {
+  background-color: var(--color-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0,0,0,.15);
+}
+
+/* === Card Styles === */
+.card-hover {
+  background: var(--color-card);
+  border-radius: 1rem;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.1);
+}
+
+/* === Section Spacing & Containers === */
+section {
+  padding: 4rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === Fade-in Animation === */
+@keyframes fadeInUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.fade-in-up {
+  opacity: 0;
+  animation: fadeInUp .8s ease forwards;
+}
+
+.fade-in-up:nth-child(odd) { animation-delay: .2s; }
+.fade-in-up:nth-child(even) { animation-delay: .4s; }
+
+/* === Focus Rings for Forms === */
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(99,102,241,.3);
+}
+
+/* === Gradient Text Utility === */
+.text-gradient {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* === Sticky Nav Shadow === */
+nav.sticky-nav {
+  transition: box-shadow .3s ease;
+}
+
+nav.sticky-nav.scrolled {
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+}
+
+/* === Section Icons (Optional) === */
+.section-icon {
+  width: 48px;
+  margin: 0 auto 1rem;
+  display: block;
+}
