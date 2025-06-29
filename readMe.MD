@@ -1,2 +1,3 @@
 #MY COACH
-https://github.com/RMD95/My-Coach.git
+
+https://rmd95.github.io/My-Coach/
